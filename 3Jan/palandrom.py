@@ -9,5 +9,5 @@ for i in mystring:
 if(mystring==revString):
     print(f"Given string::{mystring} is palindrom")
 
-
+#priti 15Jan
 # print(revString)
