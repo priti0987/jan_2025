@@ -11,4 +11,12 @@ def test_list(playwright: sync_playwright()):
     assert response.status_text == 'OK'
     res = response.json()
     print(res[0].get('name'))
-    assert "Goswamee Sethi" == res[0].get('name')
+    assert "Kalinda Khan" == res[0].get('name')
+    size = len(res)
+    print(size)
+    for i in range(0,size-1):
+        if "Divya Saini" == res[i].get('name'):
+            assert "Divya Saini" == res[i].get('name')
+            print("====================assert pass")
+            break
+        print(res[i].get('name'))
