@@ -7,4 +7,4 @@ pattern = r"[A-Z]"
 matchh = re.finditer(pattern,text)
 print(matchh)
 for i in matchh:
-    print(i)
+    print(i.span())
