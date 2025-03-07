@@ -17,5 +17,5 @@ def read_pdf_line_by_line(pdf_path):
                 if emails :
                     print(emails)
 
-pdf_path = "C:\\Users\\Dell\\Downloads\\QA16j.pdf"
+pdf_path = "C:\\Users\\Dell\\Downloads\\QA3.pdf"
 read_pdf_line_by_line(pdf_path)
