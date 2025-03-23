@@ -37,7 +37,8 @@ print
 12
 123
 1234
-12345 with space '''
+12345 with space 
+'''
 
 for i in range(1,6):
     for j in range(1,i+1):
@@ -45,6 +46,15 @@ for i in range(1,6):
     print()
 
 
-    
+'''
+ print
+ 5 4 3 2 1
+ 4 3 2 1
+ 3 2 1
+ 2 1
+ 1'''
 
-
+for i in range(5,0,-1):
+    for j in range(i,0,-1):
+        print(j,end=" ")
+    print()
