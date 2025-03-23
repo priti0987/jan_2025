@@ -16,8 +16,9 @@
 # print(sum)
 #reverse a word : input => python, output => nohtyp
 inputWord = input("Enter word : ")
-outputWord = ""
-for i in range(len(inputWord)):
-    outputWord = inputWord[i]+outputWord
+# for i in range(len(inputWord)):
+#     outputWord = inputWord[i]+outputWord
+# print(outputWord)
 
-print(outputWord)
+for i in range(len(inputWord)-1,-1,-1):
+    print(inputWord[i],end=" ")
