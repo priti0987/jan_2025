@@ -1,0 +1,26 @@
+import time
+
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
+
+# Set up the Chrome browser using WebDriver Manager (auto handles driver setup)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+# Open a website
+driver.get(url)
+
+# Optional: Maximize the browser window
+driver.maximize_window()
+time.sleep(3)
+
+driver.find_element(By.NAME,"username").send_keys("Admin")
+driver.find_element(By.NAME,"password").send_keys("admin123")
+driver.find_element(By.XPATH,"//button[@type='submit']").click()
+
+
+#input("Press ENTER to close the browser...")
+
+time.sleep(6)
+
