@@ -18,9 +18,20 @@ time.sleep(3)
 driver.find_element(By.NAME,"username").send_keys("Admin")
 driver.find_element(By.NAME,"password").send_keys("admin123")
 driver.find_element(By.XPATH,"//button[@type='submit']").click()
+time.sleep(5)
+try:
+    print("intryyy")
+    myele = driver.find_element(By.XPATH("//li[@class='oxd-userdropdown']"))
+    print(myele.is_displayed())
+    myele.click()
+except:
+    pass
+time.sleep(1)
 
+#logoutLink=driver.find_element(By.XPATH("//a[contains(@href,'logout')]")).is_displayed()
 
+#print(logoutLink)
 #input("Press ENTER to close the browser...")
 
-time.sleep(6)
+time.sleep(16)
 
