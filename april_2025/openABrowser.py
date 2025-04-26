@@ -21,9 +21,10 @@ driver.find_element(By.XPATH,"//button[@type='submit']").click()
 time.sleep(5)
 try:
     print("intryyy")
-    myele = driver.find_element(By.XPATH("//li[@class='oxd-userdropdown']"))
-    print(myele.is_displayed())
-    myele.click()
+    myele = driver.find_element(By.XPATH("//p[contains(@class,'orangehrm-attendance-card-details')]"))
+    #print(myele.is_displayed())
+    #myele.click()
+    print(myele)
 except:
     pass
 time.sleep(1)

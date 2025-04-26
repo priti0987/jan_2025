@@ -12,6 +12,7 @@ def test_list(playwright: sync_playwright()):
     res = response.json()
     print(res[0].get('name'))
     assert "Kalinda Khan" == res[0].get('name')
+
     size = len(res)
     print(size)
     for i in range(0,size-1):
