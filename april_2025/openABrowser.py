@@ -21,16 +21,21 @@ driver.find_element(By.XPATH,"//button[@type='submit']").click()
 time.sleep(5)
 try:
     print("intryyy")
-    myele = driver.find_element(By.XPATH("//p[contains(@class,'orangehrm-attendance-card-details')]"))
-    #print(myele.is_displayed())
+    myele = driver.find_elements(By.TAG_NAME, "p")
+    print(len(myele))
+    print(myele[0].text)
+    myele[0].click()
+    time.sleep(1)
+    logoutLink = driver.find_element(By.XPATH,"//a[contains(text(),'Logout')]")
+    print("logoutlink=  ",logoutLink.is_displayed())
+    logoutLink.click()
+    #for i in myele:
+    #    print(i.text)
     #myele.click()
-    print(myele)
 except:
     pass
-time.sleep(1)
 
 #logoutLink=driver.find_element(By.XPATH("//a[contains(@href,'logout')]")).is_displayed()
-
 #print(logoutLink)
 #input("Press ENTER to close the browser...")
 
