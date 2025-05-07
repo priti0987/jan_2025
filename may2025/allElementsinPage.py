@@ -2,7 +2,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-
 from selenium.webdriver.support.wait import WebDriverWait
 
 # Start a browser session (make sure you have the correct WebDriver installed)
@@ -36,7 +35,6 @@ def writeIn(by, desc,data):
         wait.until(EC.element_to_be_clickable((By.NAME, desc)))
         driver.find_element(By.NAME, desc).send_keys(data)
 
-
 def clickElement(by, desc):
     wait = WebDriverWait(driver, 10)
     by = by.upper()
@@ -49,7 +47,11 @@ def clickElement(by, desc):
 
 # clickElement('XPATH','(//a[contains(@href,"customer/login")])[2]')
 writeIn('XPATH','//input[@name="email"]','priti')
-time.sleep(3)
+writeIn('XPATH','//input[@name="Password"]','password')
+writeIn('XPATH','//input[@name="company"]','companYY')
+writeIn('XPATH','//input[@name="mobile number"]','9988774455')
+
+time.sleep(2)
 
 # Close the browser
 driver.quit()
