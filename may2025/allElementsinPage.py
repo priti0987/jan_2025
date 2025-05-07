@@ -23,7 +23,7 @@ time.sleep(3)
 #         print("Error retrieving tag:", e)
 
 def writeIn(by, desc,data):
-    wait = WebDriverWait(driver, 10)
+    wait = WebDriverWait(driver, 15)
     by = by.upper()
     if by == 'ID':
         wait.until(EC.element_to_be_clickable((By.ID, desc)))
@@ -36,7 +36,7 @@ def writeIn(by, desc,data):
         driver.find_element(By.NAME, desc).send_keys(data)
 
 def clickElement(by, desc):
-    wait = WebDriverWait(driver, 10)
+    wait = WebDriverWait(driver, 15)
     by = by.upper()
     if by == 'ID':
         wait.until(EC.element_to_be_clickable((By.ID, desc)))
@@ -51,6 +51,8 @@ writeIn('XPATH','//input[@name="Password"]','password')
 writeIn('XPATH','//input[@name="company"]','companYY')
 writeIn('XPATH','//input[@name="mobile number"]','9988774455')
 
+time.sleep(2)
+clickElement('XPATH',"//button[@value='Submit']")
 time.sleep(2)
 
 # Close the browser
