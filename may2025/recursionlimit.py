@@ -15,10 +15,32 @@
 #     return print_naturalNumber(n-1)
 #
 # print_naturalNumber(n)
+#
+# def fact(n):
+#     if n==0:
+#         return 1
+#     return n*fact(n-1)
+#
+# print(fact(5))
 
-def fact(n):
-    if n==0:
-        return 1
-    return n*fact(n-1)
+#print ur name 10times dnt user loop and manually
 
-print(fact(5))
+# n=1
+# def printmyname(name):
+#     global n
+#     if n<=10:
+#         print(name)
+#         n+=1
+#         printmyname(name)
+#
+# printmyname("priti")
+
+
+n=10
+def nameprint(name):
+    global n
+    while n>0:
+        print(name)
+        n-=1
+        nameprint(name)
+nameprint("pratap")
