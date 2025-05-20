@@ -1,17 +1,13 @@
-myString = "My name is priti"
+myString = "My name is tiya bhushan fuse"
+# outString  ="It irps ie manym"
 newString = ""
 newString = myString[::-1]
-print(newString)
+newString=newString.lower()
+newString=newString.capitalize()
 newString=newString.replace(" ","")
 newString= list(newString)
-
-print(newString)
 for i in range(len(myString)):
     if myString[i]==" ":
         newString.insert(i, " ")
-    print(i)
-    newString = "".join(newString[i])
-
-
-#print(spaceindexList)
+newString = "".join(newString)
 print(newString)
