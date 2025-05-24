@@ -1,4 +1,8 @@
-for i in range(9):
-    for j in range(i):
-        print("*",end="")
-    print("")    
+def pattern1(n):
+    for i in range(n):
+        for j in range(i):
+            print("*",end="")
+        print("")
+
+       
+pattern1(6)
