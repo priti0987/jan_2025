@@ -4,5 +4,10 @@ def pattern1(n):
             print("*",end="")
         print("")
 
-       
-pattern1(6)
+def pattern2(n):
+    for i in range(n):
+        for j in range(n-i):
+            print("*",end="")
+        print("")
+
+pattern2(6)
