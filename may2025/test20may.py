@@ -1,3 +1,4 @@
+#reverse word at odd index
 myString = "My name is tiya bhushan fuse"
 # outString  ="It irps ie manym"
 newString = ""
