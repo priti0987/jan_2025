@@ -3,14 +3,18 @@
 #............print(myString[::-1])
 
 #  Check if a string is a palindrome
-def ispalindrome(sttring):
-    return (sttring == sttring[::-1])
-
-print(ispalindrome("madam"))
+#..... def ispalindrome(sttring):
+#.....     return (sttring == sttring[::-1])
+#
+# print(ispalindrome("madam"))
 
 #  Find duplicate characters in a string
 #  Count vowels, consonants, digits, and spaces
 #  Remove all whitespace from a string
+def removeSpace(string):
+    return string.replace(" ","")
+print(removeSpace("priti fuse pratap"))
+
 #  Find the first non-repeated character ( asked in nagarro recently )
 #  Check if two strings are anagrams
 #  Count occurrences of a character
