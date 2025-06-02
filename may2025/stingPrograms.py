@@ -9,11 +9,19 @@
 # print(ispalindrome("madam"))
 
 #  Find duplicate characters in a string
+myString = "pritipratap"
+for i in range(len(myString)):
+    if myString[i] in myString:
+        print(myString[i])
+print()
+
+
+
 #  Count vowels, consonants, digits, and spaces
 #  Remove all whitespace from a string
-def removeSpace(string):
-    return string.replace(" ","")
-print(removeSpace("priti fuse pratap"))
+# def removeSpace(string):
+#     return string.replace(" ","")
+# print(removeSpace("priti fuse pratap"))
 
 #  Find the first non-repeated character ( asked in nagarro recently )
 #  Check if two strings are anagrams
