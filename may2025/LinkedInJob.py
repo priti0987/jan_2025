@@ -25,7 +25,7 @@ userIdXpath="//input[@id='username']"
 pwdXpath="//input[@id='password']"
 loginbuttonXpath="//button[@type='submit']"
 enterData(userIdXpath,"pritibhushanf@gmail.com")
-enterData(pwdXpath,"Pratap@1")
+enterData(pwdXpath,"")
 click(loginbuttonXpath)
 #********************* click on setting ********************
 #click("//span[@title='Jobs']")
