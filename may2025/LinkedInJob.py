@@ -25,9 +25,19 @@ userIdXpath="//input[@id='username']"
 pwdXpath="//input[@id='password']"
 loginbuttonXpath="//button[@type='submit']"
 enterData(userIdXpath,"pritibhushanf@gmail.com")
+enterData(pwdXpath,"Pratap@1")
 click(loginbuttonXpath)
+#********************* click on setting ********************
+#click("//span[@title='Jobs']")
+# click("//span[text()='Me']")
+resume_page_Url="https://www.linkedin.com/jobs/application-settings/?hideTitle=true"
+driver.get(resume_page_Url)
+time.sleep(3)
 
-click("//span[@title='Jobs']")
-print("Done....")
-
+pathOffile ="C:\\Users\\Dell\\Downloads\\PRITIFUSE.pdf"
+isenable_uploadButton = driver.find_element(By.XPATH,"//label[text()='Upload resume']").is_enabled()
+print(isenable_uploadButton)
+enterData("//label[text()='Upload resume']",pathOffile)
+#enterData("//input[@id='resume-upload-button']",pathOffile)
 time.sleep(5)
+print("Done....")
