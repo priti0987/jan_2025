@@ -21,10 +21,24 @@ def getAttribute(xpathOfElement):
     xpathListOfDatesEnabled = "//div[@aria-disabled='false']"
     returnAttribute = driver.find_element(By.XPATH, xpathOfElement).text
     returnAttribute=returnAttribute.replace("₹","")
-    print(returnAttribute.replace(",",""))
+    #print(returnAttribute.replace(",",""))
 
     listofdates_1 = driver.find_elements(By.XPATH,xpathListOfDatesEnabled)
     print(len(listofdates_1))
+    myList=[]
+    for i in range(1,len(listofdates_1)):
+        try:
+            xppath = '(//div[@aria-disabled="false"])['+str(i)+']/span/span'
+            elementPrice = driver.find_element(By.XPATH,xppath).text
+            elementPrice = elementPrice.replace("₹","")
+            elementPrice = elementPrice.replace(",", "")
+            #print(type(elementPrice))
+            myList.append(int(elementPrice))
+
+        except:
+            pass
+            #print("exception")
+    print("min==:",min(myList))
     # try:
     #     returnAttribute = driver.find_element(By.XPATH, xpathOfElement).get_attribute(attribute)
     #     return returnAttribute
