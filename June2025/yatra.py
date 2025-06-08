@@ -32,12 +32,10 @@ def getAttribute(xpathOfElement):
             elementPrice = driver.find_element(By.XPATH,xppath).text
             elementPrice = elementPrice.replace("₹","")
             elementPrice = elementPrice.replace(",", "")
-            #print(type(elementPrice))
             myList.append(int(elementPrice))
 
         except:
             pass
-            #print("exception")
     print("min==:",min(myList))
     # try:
     #     returnAttribute = driver.find_element(By.XPATH, xpathOfElement).get_attribute(attribute)
