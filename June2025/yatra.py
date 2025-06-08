@@ -16,6 +16,21 @@ def enterData(xpathOfElement,data):
     driver.find_element(By.XPATH, xpathOfElement).send_keys(data)
 
 
+def getAttribute(xpathOfElement):
+    wait.until(EC.element_to_be_clickable((By.XPATH, xpathOfElement)))
+    xpathListOfDatesEnabled = "//div[@aria-disabled='false']"
+    returnAttribute = driver.find_element(By.XPATH, xpathOfElement).text
+    returnAttribute=returnAttribute.replace("₹","")
+    print(returnAttribute.replace(",",""))
+
+    listofdates_1 = driver.find_elements(By.XPATH,xpathListOfDatesEnabled)
+    print(len(listofdates_1))
+    # try:
+    #     returnAttribute = driver.find_element(By.XPATH, xpathOfElement).get_attribute(attribute)
+    #     return returnAttribute
+    # except:
+    #     print("error")
+
 url = "https://www.yatra.com"
 # Launch Yatra.com
 driver.get(url)
@@ -27,7 +42,8 @@ click("(//div[contains(@aria-label,'Departure Date inputbox')]/div)[2]")
 click("//div[@aria-label='Choose Friday, June 20th, 2025']")
 # 4. Select any random date with lowest fare in next month.
 click("//span[contains(text(),'Book Round Trip')]")
+getAttribute("(//div[@aria-disabled='false'])[1]/span/span")
 click("//div[@aria-label='Choose Wednesday, July 16th, 2025']")
 # 5. Select any random date with lowest fare in both month.
 
-time.sleep(15)
+time.sleep(3)
