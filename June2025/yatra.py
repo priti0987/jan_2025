@@ -1,9 +1,3 @@
-# 1. Launch Yatra.com
-# 2. Click on departure date calendar with default selected cities
-# 3. Select any random date with lowest fare in current month.
-# 4. Select any random date with lowest fare in next month.
-# 5. Select any random date with lowest fare in both month.
-
 import time
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
@@ -30,7 +24,10 @@ driver.maximize_window()
 # 2. Click on departure date calendar with default selected cities
 click("(//div[contains(@aria-label,'Departure Date inputbox')]/div)[2]")
 # 3. Select any random date with lowest fare in current month.
+click("//div[@aria-label='Choose Friday, June 20th, 2025']")
 # 4. Select any random date with lowest fare in next month.
+click("//span[contains(text(),'Book Round Trip')]")
+click("//div[@aria-label='Choose Wednesday, July 16th, 2025']")
 # 5. Select any random date with lowest fare in both month.
 
-time.sleep(3)
+time.sleep(15)
