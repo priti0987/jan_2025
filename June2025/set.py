@@ -1,2 +1,15 @@
 myset = {2,4,5,2,7}
 print(type(myset))
+print(len(myset))
+myset.add(6)
+print(myset)
+print(len(myset))
+for i in myset:
+    print(i)
+myset.remove(2)
+print(myset)
+print(len(myset))
+myset.discard(4)
+print(myset)
+myset.clear()
+print(myset)
