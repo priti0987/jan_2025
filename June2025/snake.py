@@ -1,7 +1,6 @@
 from tkinter import *
 import random
 
-
 GAME_WIDTH = 550
 GAME_HEIGHT = 550
 SPEED = 100
@@ -25,14 +24,17 @@ class Snake:
             square = canvas.create_rectangle(x,y,x+SPACE_SIZE,y+SPACE_SIZE,fill=SNAKE_COLOR,tag="snake")
             self.squares.append(square)
 
+
 class Food:
+
     def __init__(self):
+
         x=random.randint(0,(GAME_WIDTH/SPACE_SIZE)-1)*SPACE_SIZE
         y=random.randint(0,(GAME_HEIGHT/SPACE_SIZE)-1)*SPACE_SIZE
 
 
         self.coordinates = [x,y]
-        canvas.create_oval(x,y,x+SPACE_SIZE,y+SPACE_SIZE,fill=FOOD_COLOR,tag="food")
+        canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=FOOD_COLOR, tag="food")
 def next_turn(snake,food):
     x,y = snake.coordinates[0]
     if direction == 'up':
@@ -65,6 +67,7 @@ def next_turn(snake,food):
         game_over()
     else:
         window.after(SPEED,next_turn,snake,food)
+
 def change_direction(new_direction):
     global direction
 
@@ -83,18 +86,17 @@ def change_direction(new_direction):
 
 
 
+
 def check_collisions(snake):
     x,y = snake.coordinates[0]
 
     if x<0 or x>=GAME_WIDTH:
-
         return True
     elif y < 0 or y >= GAME_HEIGHT:
         return True
 
     for body_part in snake.coordinates[1:]:
         if x== body_part[0] and y == body_part[1]:
-            print("game over")
             return True
     return False
 def game_over():
@@ -126,8 +128,8 @@ window.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
 window.bind('<Left>',lambda event: change_direction('left'))
 window.bind('<Right>',lambda event: change_direction('right'))
-window.bind('<Up>',lambda event: change_direction('Up'))
-window.bind('<Down>',lambda event: change_direction('Down'))
+window.bind('<Up>',lambda event: change_direction('up'))
+window.bind('<Down>',lambda event: change_direction('down'))
 
 snake = Snake()
 food = Food()
