@@ -18,6 +18,12 @@
 #     print("Given number is odd")
 #Find maximum of three numbers
 myList= [5,60,9]
-print(max(myList))
+# print(max(myList))
 
 #swap two variables
+
+x=10
+y=80
+x,y=y,x
+print(x)
+print(y)
