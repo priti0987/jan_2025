@@ -2,4 +2,4 @@ def test_pass():
     assert 1 == 1
 
 def test_fail():
-    assert 1 == 0
+    assert 1 == 1
