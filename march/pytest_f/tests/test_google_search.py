@@ -19,6 +19,13 @@ class TestGoogleSearch:
         search_box = driver.find_element(By.XPATH,"//textarea[@name='q']")
         search_box.send_keys(search_keyword)
         search_box.send_keys(Keys.Return)
-        time.sleep(5)
+        time.sleep(10)
         assert search_keyword in driver.title
         print(f"Search for {search_keyword}")
+
+class test_1:
+    def test_search1(self):
+        driver = webdriver.chrome()
+        driver.get("https://www.google.com")
+        search_box = driver.find_element(By.XPATH,"//textarea[@name='q']")
+        search_box.send_keys("test")
