@@ -13,7 +13,8 @@ driver.maximize_window()
 print(driver.title)
 time.sleep(2)
 #self node
-
 self_nodetext = driver.find_element(By.XPATH,"//a[contains(text(),'Recycling ')]/self::a").text
 print(self_nodetext)
 time.sleep(10)
+
+[parent ] = driver.find_element(By.XPATH,"//a[contains(text(),'Recycling ')]/self::a").text
