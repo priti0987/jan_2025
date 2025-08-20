@@ -12,6 +12,16 @@ driver.get(url)
 driver.maximize_window()
 print(driver.title)
 time.sleep(2)
+#***************************************************************************
+# 1) Self
+# 2) Parent
+# 3) Child
+# 4) Ancestor
+# 5) Descendant
+# 6) Following
+# 7) Following-sibling
+# 8) Preceding
+# 9) preceding-sibling
 #self node
 self_nodetext = driver.find_element(By.XPATH,"//a[contains(text(),'Recycling ')]/self::a").text
 print(self_nodetext)
