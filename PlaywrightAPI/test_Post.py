@@ -2,9 +2,9 @@ from playwright.sync_api import sync_playwright
 #need to use random function to create new email each time to get 201 response
 def test_list(playwright: sync_playwright()):
     data = {
-        "name":"pmnnvritii",
+        "name":"iooiu",
         "gender":"male",
-        "email":"pdftimmm@email.kkk",
+        "email":"kjj@email.kkk",
         "status":"active"
     }
 
