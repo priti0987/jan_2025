@@ -28,3 +28,6 @@ c.sell()
 
 c.setMaxPrice(1500)
 c.sell()
+
+#inheritance
+
