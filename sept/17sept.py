@@ -16,7 +16,7 @@
 # print(type(newI))
 #
 #find duplicates words in a sentence
-mysentence = "happy bday to you to you to you pri pri"
+mysentence = "happy bday to you to pri pri to you to you pri pri"
 words = mysentence.split()
 print(words)
 count = 0
