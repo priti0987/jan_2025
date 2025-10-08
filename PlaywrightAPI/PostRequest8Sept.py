@@ -4,7 +4,7 @@ from playwright.sync_api import sync_playwright
 def test_list(playwright: sync_playwright()):
     # random_email =
     data = {
-        "name":"iooioku",
+        "name":"ioocdfioku",
         "gender":"male",
         "email":"kokjj@email.kkk",
         "status":"active"
